@@ -1,4 +1,6 @@
-# Docker commands
+# DevOps with Docker and Node.js + Mongodb/Nginx
+
+## Docker commands
 
 - Create docker container using image from Docker Hub
 
@@ -18,7 +20,7 @@ docker start CONTAINER_ID
 docker stop CONTAINER_ID
 ```
 
-- Delete a Container
+- Deleting a Container
 
 ```shell
 docker rm CONTAINER_ID
@@ -51,7 +53,7 @@ docker run -d -it --name firstcontainer alpine
 docker kill CONTAINER_ID
 ```
 
-# Master the Docker Commands
+## Master the Docker Commands
 
 - Attaching to the container
 
@@ -77,7 +79,7 @@ docker images
 docker rmi <Image_ID>
 ```
 
-# Productive Docker Commands
+## Productive Docker Commands
 
 - Copying Contents between Containers and the host file system
 
@@ -104,7 +106,7 @@ docker diff CONTAINER_ID
 docker commit CONTAINER_ID REPOSITORY:TAG
 ```
 
-# Useful Docker Commands
+## Useful Docker Commands
 
 - Add persistent volume to the containers
 
@@ -130,7 +132,7 @@ docker history IMAGE_ID
 docker rename CONTAINER NEW_NAME
 ```
 
-# Docker Commands and Networking
+## Docker Commands and Networking
 
 - How to restart a docker container
 
