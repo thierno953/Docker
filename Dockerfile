@@ -1,8 +1,14 @@
-FROM node:18 
+FROM node:18
 WORKDIR /app
-COPY package.json . 
-RUN  npm install
+COPY package.json .
+
+ARG NODE_ENV
+RUN if [ "$NODE_ENV" = "development" ]; \
+    then npm install; \
+    else npm install --only=production; \
+    fi
+
 COPY . ./
 ENV PORT 5000
 EXPOSE $PORT
-CMD ["npm", "run", "dev"]
+CMD ["node", "index.js"]
